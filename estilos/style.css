@@ -67,7 +67,7 @@ header > p {
     font-size: 1.2em; /* tamanho da fonte */
     max-width: 600px; /* máximo da caixa */
     padding: 0px 10px 0px 10px; /* Distância cima-direita-baixo-esquerda */
-    margin-bottom: 20px; /* Distância superior do objeto acima */
+    padding-bottom: 50px; /* Distância superior do objeto acima */
     margin: auto; /* manter centralizado */
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267); /* Sombra no texto */
 }
