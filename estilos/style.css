@@ -82,6 +82,7 @@ nav > a {
     color: var(--cor1); /* cor do texto */
     padding: 10px; /* Distância entre os textos do menu de navegação */
     text-decoration: none; /* Remove o siblinhado de link */
+    font-size: 0.9em; /* Tamanho da fonte */
     font-weight: bold; /* Letra em negrito */
     border-radius: 5px; /* Arredondar as quinas da caixa */
     transition-duration: 0.5s; /* Efeito de transição nos botões de navegação */
