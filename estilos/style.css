@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+/* VERDE
+#c5ebd6     mais claro
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e     mais escuro
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /* Importando fonte do site do Google */
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype'); /* Atribuindo uma fonte de um diretório local */
+    font-weight: normal;
+}
+
+/* Semelhante quando adiciona variáveis globais */
+:root {
+    --cor0: #c5ebd6;     
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --fonte-android: 'Android', sans-serif;
+}
+
+/* O asterisco é pra se referir a todos os elementos,
+caso fosse determinar alguns específicos também é possível
+ex: h1, h2, p, etc. */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--font-padrao);
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /* Criar a cor gradiente do cabeçalho */
+    min-height: 150px; /* Altura do cabeçalho */
+    text-align: center; /* Alinhamento do texto */
+    padding-top: 40px; /* Distância do topo da tela */
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque); /* variável da fonte */
+    font-size: 3em; /* tamanho da fonte */
+    font-weight: normal; /* Remove o negrito padrão do h1 */
+    margin-bottom: 20px; /* Distância superior do objeto acima */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267); /* Sombra no texto */
+
+}
+
+header > p {
+    color: white;
+    font-family: var(--font-padrao); /* variável da fonte */
+    font-size: 1.2em; /* tamanho da fonte */
+    max-width: 600px; /* máximo da caixa */
+    padding: 0px 10px 0px 10px; /* Distância cima-direita-baixo-esquerda */
+    margin-bottom: 20px; /* Distância superior do objeto acima */
+    margin: auto; /* manter centralizado */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267); /* Sombra no texto */
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px; /* Distência entre os objetos */
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.342);
+}
+
+nav > a {
+    color: var(--cor1); /* cor do texto */
+    padding: 10px; /* Distância entre os textos do menu de navegação */
+    text-decoration: none; /* Remove o siblinhado de link */
+    font-weight: bold; /* Letra em negrito */
+    border-radius: 5px; /* Arredondar as quinas da caixa */
+    transition-duration: 0.5s; /* Efeito de transição nos botões de navegação */
+}
+
+/* Passar o mouse mudar de cores e destacar a caixa */
+nav > a:hover {
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+main {
+    background-color: white; /* Cor total do bloco */
+    padding: 20px; /* Distanciar da borda */
+    border-radius: 0px 0px 10px 10px; /* Arredondar as bordas | superior esquerda > superior direita > inferior direita > inferior esquerda*/
+    margin-bottom: 30px; /* Margem inferior */
+    min-width: 300px; /* Determinando o mínimo da largura */
+    max-width: 1000px; /* Determinando o máximo da largura */
+    margin: auto; /* Centralizar */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.479); /* Sombra */
+}
+
+main h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-size: 1.8em; /* Tamanho da fonte */
+    font-weight: normal; /* Remove o negrito padrão do h1 */
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor4); /* cor da fonte */
+    font-size: 1.3em; /* tamanho da fonte */
+    font-weight: normal; /* Remove o negrito padrão do h1 */
+    background-image: linear-gradient(to right, var(--cor1), transparent); /* Destaque dos Subtítulos com efeito apagando */
+    text-indent: 6px; /* Afasta o texto do início da caixa */
+    padding: 3px; /* Engrossa o destaque */
+    border-radius: 5px; /* Arredonda as quinas */
+}
+
+/* Quando não coloca o sinal > é pra aplicar a todos do projeto */
+main p {
+    margin: 15px 0px 15px 0px; /* Separar os parágrados dos Títulos */
+    text-align: justify; /* Texto justificado */
+    text-indent: 30px; /* Afastar a primeira linha do parágrafo */
+    font-size: 1em; /* Tamanho da fonte */
+    line-height: 2em; /* Altura entre as linhas */
+}
+
+/* Estilo pra tudo que tiver a tag <strong> */
+main strong {
+    color: var(--cor4); /* Cor da fonte */
+    font-weight: bold; /* Texto em negrito */
+
+}
+
+/* Estilo pra tudo que for Link */
+main a {
+    text-decoration: none; /* remove o sublinhado padrão de link */
+    color: var(--cor5); /* Cor da fonte */
+    font-weight: bold; /* Texto em negrito */
+    background-color: var(--cor1); /* Cor da caixa ex de texto destacado */
+    padding:  2px 6px; /* Aumentar a área do destaque */
+    border-radius: 5px; /* Bordas do destaque arredondadas */
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+/* Todo link externo vai receber o símbolo */
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
+main img {
+    width: 100%; /* Mantém a imagem exibindo 100% e se adaptando ao tamanho da tela */
+}
+
+main img.pequena {
+    max-width: 350px;
+    display: block; /* Necessário pra obedecer o comando abaixo da margin */
+    margin: auto; /* Centraliza no centro */ 
+}
+
+div.video {
+    background-color: var(--cor5); /* determinar cor da caixa */
+    margin: 0px -20px 30px -20px; /* prencher toda a caixa sem borda */
+    padding: 20px; /* distanciar o video das quinas da caixa */
+
+    /* Configurações para tornar o video responsivo */
+    padding-bottom: 59%;
+    position: relative;
+}
+
+/* Configurações para tornar o video responsivo */
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+/* É uma caixa dentro no main > article > aside | Se refere a uma tag complementar */
+aside {
+    background-color: var(--cor1); /* Cor de total da caixa */
+    padding: 10px; /* Distância entre os objetos em volta */
+    border-radius: 10px; /* Arredonda as quinas */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.280); /* Sombra na caixa do aside */
+}
+
+/* Estilo do h3 com borda envolvida no aside */
+aside > h3 {
+    background-color: var(--cor4); /* cor da caixa */
+    color: white; /* cor da fonte */
+    padding: 10px; /* Engrossa a caixa */
+    margin: -10px -10px 0px -10px; /* Margem negativa para dar o efeito de estar na mesma caixa do aside compensando o padding padrão */
+    border-radius: 10px 10px 0px 0px; /* arredondando apenas as bordas superiores */
+}
+
+/* Estilo da lista */
+aside > ul {
+    list-style-position: inside; /* Inserindo os itens dentro da caixa */
+    columns: 2; /* dividindo em 2 colunas */
+    list-style-type: '\2714\00A0\00A0'; /* O Símbolo da lista \2714 se refere ao check, buscar no site emojipedia.org | já \00A0 é um espaço */
+}
+
+/* RODAPÉ */
+footer {
+    background-color: var(--cor5); /* Cor da caixa */
+    color: white; /* cor das letras */
+    text-align: center; /* Posição do texto */
+    font-size: 0.8em; /* Tamanho da fonte */
+    padding: 5px; /* Distância do objetos, engrossa a caixa */
+}
+
+/* Estilo do que é Link */
+footer a {
+    color: white; /* cor das letras */
+    font-weight: bolder; /* Letra peso de fonte mais escuro */
+    text-decoration: none; /* Remove o sublinhado padrão quando é link */
+}
+
+/* Quando passa o mouse em cima */
+footer a:hover {
+    text-decoration: underline; /* Inserir o sublinhado no link */
+    color: var(--cor1); /* Muda a cor das letras */
+}
